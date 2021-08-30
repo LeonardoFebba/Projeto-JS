@@ -3,6 +3,8 @@ export default function initMenuMobile() {
   const menuList = document.querySelector('[data-menu="list"]');
 
   function openMenu() {
+    // eslint-disable-next-line no-restricted-globals
+    event.preventDefault();
     menuButton.classList.toggle('active');
     menuList.classList.toggle('active');
   }

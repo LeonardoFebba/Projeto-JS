@@ -1,4 +1,12 @@
-* {
+body,
+h1,
+h2,
+ul,
+li,
+p,
+dd,
+dt,
+dl {
   margin: 0;
   padding: 0;
 }
@@ -18,7 +26,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.grid-container{
+.grid-container {
   display: grid;
   grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
 }
@@ -27,7 +35,7 @@ body {
   grid-column: 3 / 5;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  background-color: #fb5;
+  background: #fb5;
 }
 
 .menu ul {
@@ -61,12 +69,30 @@ body {
 }
 
 .titulo {
-  font-family: "Playfair Display SC", serif;
+  font-family: "Playfair Display SC", georgia;
   font-size: 6rem;
   line-height: 1;
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: 1rem;
   grid-column: 1 / 4;
+}
+
+.luminarias h2 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  color: #e54;
+}
+
+.luminarias h2::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
 }
 
 .luminarias-descricao p {
@@ -82,6 +108,24 @@ body {
   height: 10px;
   margin-right: 10px;
   background: #fb5;
+}
+
+.luminarias-lista li {
+  cursor: pointer;
+}
+
+.luminarias-lista::-webkit-scrollbar {
+  width: 18px;
+}
+
+.luminarias-lista::-webkit-scrollbar-thumb {
+  background: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+
+.luminarias-lista::-webkit-scrollbar-track {
+  background: #faf6ed;
 }
 
 .luminarias-descricao h2 {
@@ -173,7 +217,7 @@ body {
   font-weight: Bold;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .grid-container {
     grid-template-columns: 1fr;
   }
@@ -267,24 +311,24 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-[data-semana]::after{
-    display: inline-block;
-    content: ' ';
-    width: 6px;
-    height: 6px;
-    background: #e54;
-    border-radius: 50%;
-    margin-left: 4px;
-    border: 1px solid black;
+[data-semana]::after {
+  display: inline-block;
+  content: " ";
+  width: 6px;
+  height: 6px;
+  background: #e54;
+  border-radius: 50%;
+  margin-left: 4px;
+  border: 1px solid black;
 }
 
-[data-semana].aberto::after{
-  background: #3f4; 
-}
-
-.btc-preco{
+[data-semana].aberto::after {
   background: #3f4;
-  padding: .2rem .5rem;
+}
+
+.btc-preco {
+  background: #3f4;
+  padding: 0.2rem 0.5rem;
   font-weight: bold;
   border-radius: 2px;
 }

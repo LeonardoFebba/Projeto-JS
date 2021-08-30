@@ -96,7 +96,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initMenuMobile)\n/* harmony export */ });\nfunction initMenuMobile() {\n  const menuButton = document.querySelector('[data-menu=\"button\"]');\n  const menuList = document.querySelector('[data-menu=\"list\"]');\n\n  function openMenu() {\n    menuButton.classList.toggle('active');\n    menuList.classList.toggle('active');\n  }\n\n  menuButton.addEventListener('click', openMenu);\n}\n\n\n//# sourceURL=webpack://projeto/./js/Modules/mobile-menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initMenuMobile)\n/* harmony export */ });\nfunction initMenuMobile() {\n  const menuButton = document.querySelector('[data-menu=\"button\"]');\n  const menuList = document.querySelector('[data-menu=\"list\"]');\n\n  function openMenu() {\n    // eslint-disable-next-line no-restricted-globals\n    event.preventDefault();\n    menuButton.classList.toggle('active');\n    menuList.classList.toggle('active');\n  }\n\n  menuButton.addEventListener('click', openMenu);\n}\n\n\n//# sourceURL=webpack://projeto/./js/Modules/mobile-menu.js?");
 
 /***/ }),
 

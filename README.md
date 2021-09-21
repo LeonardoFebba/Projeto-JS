@@ -1,5 +1,5 @@
 # Projeto-JS
-Projeto final do curso de JavaScript
+Final project from JavaScript course
 
 <h2>Hello everyone!</h2>
 
